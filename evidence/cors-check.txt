@@ -1,0 +1,34 @@
+===== CORS: HOMEPAGE =====
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Feature-Policy: payment 'self'
+X-Recruiting: /#/jobs
+Accept-Ranges: bytes
+Cache-Control: public, max-age=0
+Last-Modified: Thu, 22 Oct 2026 12:11:07 GMT
+ETag: W/"2700-1a16385ae27"
+Content-Type: text/html; charset=UTF-8
+Content-Length: 9984
+Vary: Accept-Encoding
+Date: Thu, 22 Oct 2026 13:25:19 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+
+
+===== CORS: PRODUCT SEARCH API =====
+HTTP/1.1 200 OK
+Access-Control-Allow-Origin: *
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+Feature-Policy: payment 'self'
+X-Recruiting: /#/jobs
+Content-Type: application/json; charset=utf-8
+Content-Length: 1617
+ETag: W/"651-slyconQPELqOBlFW0caHt6r8M/c"
+Vary: Accept-Encoding
+Date: Thu, 22 Oct 2026 13:25:19 GMT
+Connection: keep-alive
+Keep-Alive: timeout=5
+

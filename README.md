@@ -1,41 +1,55 @@
 # VAPT Home Lab
 
-A practical Vulnerability Assessment and Penetration Testing
-lab built with Kali Linux, Docker, and OWASP Juice Shop.
+A hands-on vulnerability assessment and web security testing
+portfolio built with Kali Linux, Docker, and OWASP Juice Shop.
 
 ## Objectives
-- Perform network reconnaissance and service identification.
-- Explore web application functionality and APIs.
-- Practise authorised OWASP Top 10 security testing.
-- Collect reproducible evidence.
-- Document risk, impact, and remediation.
+- Practise reconnaissance and service identification.
+- Map web application routes and API endpoints.
+- Explore OWASP Top 10 vulnerability classes in a controlled lab.
+- Capture reproducible evidence and document test outcomes.
+- Recommend mitigations and distinguish confirmed findings
+  from observations that require further validation.
 
-## Environment
-- Attacker: Kali Linux
+## Lab Architecture
+- Attacker environment: Kali Linux
 - Target: OWASP Juice Shop
-- Container runtime: Docker
+- Runtime: Docker
 - Target URL: http://127.0.0.1:3000
-- Exposure: Localhost only
+- Network exposure: Bound to localhost
+
+The target is intentionally vulnerable and must remain local.
+Do not expose it publicly.
 
 ## Tools
-Nmap, curl, Docker, Burp Suite, Git.
+Nmap, curl, Firefox Developer Tools, Docker, Git.
 
-## Methodology
-1. Confirm scope and authorisation.
-2. Verify target availability.
-3. Perform reconnaissance and enumeration.
-4. Test selected vulnerabilities manually.
-5. Validate findings and capture evidence.
-6. Document impact and remediation.
-7. Retest fixes where possible.
+## Work Completed
+- Initial port and service reconnaissance.
+- HTTP header and endpoint enumeration.
+- CORS response-header review.
+- Review of a profile-route error response.
+- Review of the application's Prometheus-style metrics endpoint.
+- Juice Shop challenges: DOM XSS, Bonus Payload, View Basket,
+  and Login Admin.
 
-## Evidence
-Initial reconnaissance evidence is stored in `evidence/`.
-Reports are stored in `reports/`.
+## Project Structure
+- `evidence/` — captured responses and test output
+- `notes/` — scope, reconnaissance, and challenge results
+- `reports/` — observations and finding reports
+- `scripts/` — space for reproducible assessment scripts
 
-Only verified findings will be reported. No vulnerability
-is claimed without supporting evidence.
+## Reporting Approach
+Reports distinguish observations, training challenge completions,
+and independently validated vulnerabilities. Severity is not
+assigned solely because a challenge is solved or an endpoint
+returns a particular HTTP status.
+
+See `notes/scope.md` for scope and safety rules.
+See `notes/challenge-results.md` for the challenge summary.
+See `reports/` for the current assessments.
 
 ## Safety
-Testing is restricted to the local, intentionally vulnerable
-target. Do not expose it publicly or test unauthorised systems.
+All testing is limited to the locally deployed training target.
+No third-party systems are in scope. Do not commit credentials,
+session tokens, cookies, or other secrets.

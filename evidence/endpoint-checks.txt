@@ -1,0 +1,6 @@
+/robots.txt                            HTTP 200
+/sitemap.xml                           HTTP 200
+/api/Challenges                        HTTP 200
+/rest/products/search?q=apple          HTTP 200
+/profile                               HTTP 500
+/login                                 HTTP 200
